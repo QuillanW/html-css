@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Style/style.css">
+        <title>Page Title</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="My own HTML/CSS site">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Quillan Wielhouwer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="borderL" class="borderLeft1">
+            <p>1</p>
+        </div>
+        <div id="borderR" class="borderRight1">
+            <p>1</p>
+        </div>
+        <div class="homehead" id="userName" style="font-size: xx-large;"></div>
+        <div class="homehead" id="userAge"></div>
+        <div class="homehead" id="userPlace"></div>
+        <div class="homehead" id="userMail"></div><br>
+        <div class="links">
+            <a href="Pagina/Screenshot.html">Console Screenshot</a><br>
+            <a href="/Week 1/index.html">Opdracht Week 1</a><br>
+            <a href="/Week 2/week2_opdr1.html">Opdracht Week 2</a>
+        </div>
+        <script>
+            document.getElementById("userName").innerHTML = "Welcome " + sessionStorage.getItem("username") + "!";
+            document.getElementById("userAge").innerHTML = "You are " + sessionStorage.getItem("userage") + " years old.";
+            document.getElementById("userPlace").innerHTML = "You live somewhere in " + sessionStorage.getItem("userplace");
+            document.getElementById("userMail").innerHTML = "Your E-Mail adress is " + sessionStorage.getItem("usermail");
+            var backColor = sessionStorage.getItem("usercolor");
+            document.getElementById("borderL").style.backgroundColor = backColor;
+            document.getElementById("borderR").style.backgroundColor = backColor;
+        </script>
+    </body>
+</html>
