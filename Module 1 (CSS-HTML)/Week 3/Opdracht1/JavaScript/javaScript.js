@@ -9,3 +9,5 @@ function checkpassword() {
     var data = document.getElementById("data1")
     return console.log(data)
 }
+
+console.log("wachtwoord is: 'code'")
